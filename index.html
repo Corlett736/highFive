@@ -50,16 +50,15 @@
        "url" : "slap.mp3",
        "retrigger" : true
     });
-    
-    
-    slap.connect(Tone.Master);
+     slap.connect(Tone.Master);
     var borat = new tone.player({
             "url" : "borat.mp3"
             "loopstart" : true
         })
-      borat.connect(tone.Master)
+      borat.connect(Tone.Master)
     function mouseActions(event) {
         slap.start();
+        borat.start();
     }
     </script>
 
