@@ -48,10 +48,14 @@
     var button = document.getElementById("button");
     
   
-       if (!hand.onmousedown){ 
-        hand.ontouchstart = mouseActions;
-       button.ontouchstart = mouseActions;
+       if (!hand.ontouchstart){ 
+        hand.onmousedown = mouseActions;
+       button.onmousedown = mouseActions;
        }
+       else{
+           hand.ontouchstart = mouseActions;
+       button.ontouchstart = mouseActions;
+        }
   
     
      var slap = new Tone.Player({
