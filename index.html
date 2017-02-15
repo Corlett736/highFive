@@ -37,7 +37,7 @@
         <p> 1 </p>
         <img id="hand" src="hand.png"></img><br>
         <span class="rightTop">
-            <button id="button">helllo</button>
+            <button id="button">helo</button>
         </span>
     </div>
 
@@ -48,8 +48,10 @@
     var button = document.getElementById("button");
     
   
-       hand.onmousedown = hand.ontouchstart = mouseActions;
-       button.onmousedown = button.ontouchstart = mouseActions;
+       if (!hand.onmousedown){ 
+        hand.ontouchstart = mouseActions;
+       button.ontouchstart = mouseActions;
+       }
   
     
      var slap = new Tone.Player({
