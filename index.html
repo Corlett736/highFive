@@ -43,7 +43,7 @@
     <script>
     var hand = document.getElementById("hand");
     var button = document.getElementById("button");
-    hand.ontouchstart = mouseActions;
+    hand.onclick = mouseActions;
     button.onclick = button.ontouchstart = mouseActions;
     
      var slap = new Tone.Player({
